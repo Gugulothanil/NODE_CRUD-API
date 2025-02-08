@@ -1,8 +1,7 @@
-
-const express = require("express")
+const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
-const itemRoutes = require('./routes/itemRoutes');
+const itemRoutes = require('./routes/itemRoutes'); // ✅ Ensure this is correct
 
 dotenv.config();
 
@@ -13,12 +12,7 @@ app.use(cors());
 app.set('trust proxy', 1);
 
 console.log("✅ Registering routes...");
-app.use('/api', itemRoutes);
-
-// ✅ Debug route (should work in browser)
-app.get('/test', (req, res) => {
-    res.send("✅ Test route is working!");
-});
+app.use('/api', itemRoutes);  // ✅ Ensure this registers routes under `/api`
 
 app.get('/', (req, res) => {
     res.send('Welcome to Street Style Store API!');
