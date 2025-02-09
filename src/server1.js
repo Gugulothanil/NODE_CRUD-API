@@ -13,4 +13,9 @@ app.use(cors());
 app.use('/api', itemRoutes);
 app.use('/auth', authRoutes);
 
+// ✅ Fix: Add a default route for '/'
+app.get('/', (req, res) => {
+    res.send('Welcome to the Node.js CRUD API! 🎉');
+});
+
 app.listen(process.env.PORT, () => console.log(`✅ Server running on port ${process.env.PORT}`));
