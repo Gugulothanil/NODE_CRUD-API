@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx nodemon src/server1.js"
+    "start": "npx nodemon src/server1.js",
+    "build": "npm rebuild sqlite3"
+
   },
   "keywords": [],
   "author": "",
