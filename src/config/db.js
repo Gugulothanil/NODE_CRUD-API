@@ -1,4 +1,4 @@
-const mysql = require('mysql2/promise'); // Use 'pg' for PostgreSQL
+const mysql = require('mysql2/promise');
 require('dotenv').config();
 
 const pool = mysql.createPool({
