@@ -5,6 +5,7 @@ require('dotenv').config();
 
 // Register a new user
 exports.register = async (req, res) => {
+    console.log("register api triggered")
     try {
         const { username, password } = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);
